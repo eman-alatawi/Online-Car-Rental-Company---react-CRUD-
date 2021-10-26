@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import { Route, Switch } from 'react-router-dom'
+import CarsList from './components/CarsList';
+import { CarProvider } from './components/CarContext';
+import NewCar from './components/NewCar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CarProvider>
+
+      <div className="main-container">
+        <NavBar />
+        <div className="heading">
+          <h2>Welcome to Our Car Rental System</h2>
+        </div>
+      </div>
+
+
+      <Switch>
+        <Route path="/allCars" component={CarsList} />
+        <Route path="/newCar" component={NewCar} />
+      </Switch>
+    </CarProvider>
   );
 }
 

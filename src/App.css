@@ -1,38 +1,64 @@
-.App {
+body{
+  background-color: rgb(222, 222, 228) !important;
+
+}
+
+.main-container{
+  height: 50vh;
+  background-image: url('https://images.unsplash.com/photo-1471479917193-f00955256257?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1331&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.heading{
+
+  margin-top: 6em;
+}
+h2{
+  color: whitesmoke;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none !important;
+  color: azure !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover{
+  color: rgb(93, 252, 252) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carsList{
+  padding: 2em 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em
+
+}
+
+.form-container{
+  width: 100vw;
+  padding: 2em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.form-container Button{
+  width: 20em;
+}
+.img-container{
+  height: 10rem;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img{
+  height: 100%;
+  object-fit: cover;
+
 }
